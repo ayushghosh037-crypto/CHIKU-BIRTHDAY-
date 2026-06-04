@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Chiku ❤️</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+overflow-x:hidden;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#ffd6e8,#ffe8f5,#f5ddff);
+}
+
+h1,h2{
+font-family:'Great Vibes',cursive;
+}
+
+.floating-heart{
+position:fixed;
+bottom:-20px;
+animation:floatUp 8s linear infinite;
+opacity:.8;
+font-size:28px;
+z-index:999;
+pointer-events:none;
+}
+
+@keyframes floatUp{
+from{
+transform:translateY(0);
+opacity:1;
+}
+to{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+
+.gallery img{
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+</style>
+
+</head>
+
+<body class="min-h-screen text-gray-800 p-4">
+
+<div class="max-w-6xl mx-auto">
+
+<div class="text-center mt-6">
+
+<img
+src="IMG-20260126-WA0010.jpg"
+class="w-72 h-72 object-cover rounded-full mx-auto border-8 border-pink-300 shadow-2xl">
+
+<h1 class="text-6xl md:text-8xl font-black mt-6 text-pink-700">
+Happy Birthday Chiku ❤️
+</h1>
+
+<p class="mt-4 text-xl md:text-3xl font-semibold">
+To The Most Beautiful Girl In My World ✨
+</p>
+
+</div>
+
+<div class="grid md:grid-cols-2 gap-6 mt-10">
+
+<div class="bg-white/70 backdrop-blur-xl rounded-3xl shadow-2xl p-6">
+
+<h2 class="text-5xl mb-5">
+Reasons Why Chiku Is Amazing 💖
+</h2>
+
+<ul class="space-y-3 text-lg">
+
+<li>🌹 Makes every day feel special</li>
+<li>✨ Has the prettiest smile</li>
+<li>💌 Makes life more beautiful</li>
+<li>🥺 Too cute for this world</li>
+<li>❤️ The best person ever</li>
+
+</ul>
+
+</div>
+
+<div class="bg-white/70 backdrop-blur-xl rounded-3xl shadow-2xl p-6">
+
+<h2 class="text-5xl mb-4">
+Love Message Machine 💌
+</h2>
+
+<div id="messageBox"
+class="bg-pink-100 rounded-2xl p-5 text-xl font-semibold min-h-[120px] flex items-center justify-center text-center">
+
+You are officially the cutest human on this planet 😌
+
+</div>
+
+<button onclick="randomMessage()"
+class="mt-5 w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 rounded-2xl">
+
+Press Me ❤️
+
+</button>
+
+<p id="counter"
+class="mt-3 text-center text-sm opacity-70">
+
+Button pressed 0 times 👀
+
+</p>
+
+</div>
+
+</div>
+<!-- Cute Meter -->
+
+<div class="mt-10 bg-white/70 rounded-3xl shadow-2xl p-6 text-center">
+
+<h2 class="text-6xl mb-5">
+Cute Meter 📈
+</h2>
+
+<img
+src="IMG-20260126-WA0011.jpg"
+class="w-64 h-64 object-cover rounded-3xl mx-auto shadow-xl mb-6">
+
+<div class="w-full bg-gray-200 rounded-full h-8 overflow-hidden">
+
+<div class="bg-gradient-to-r from-pink-500 to-red-400 h-8 w-full flex items-center justify-center text-white font-bold animate-pulse">
+
+1000000% Cute
+
+</div>
+
+</div>
+
+<p class="mt-4 text-lg font-medium">
+Scientists are still trying to understand this level of cuteness 🥺❤️
+</p>
+
+</div>
+
+<!-- Gallery -->
+
+<div class="mt-12 bg-white/70 rounded-3xl shadow-2xl p-8">
+
+<h2 class="text-6xl text-center mb-8">
+My Favorite Photos Of You 📸
+</h2>
+
+<div class="gallery grid md:grid-cols-3 gap-4">
+
+<img src="IMG-20260126-WA0010.jpg" class="rounded-3xl shadow-xl">
+
+<img src="IMG-20260126-WA0011.jpg" class="rounded-3xl shadow-xl">
+
+<img src="IMG-20260126-WA0013.jpg" class="rounded-3xl shadow-xl">
+
+<img src="IMG-20260126-WA0014.jpg" class="rounded-3xl shadow-xl">
+
+<img src="IMG-20260126-WA0016.jpg" class="rounded-3xl shadow-xl">
+
+</div>
+
+</div>
+
+<!-- Secret Letter -->
+
+<div class="mt-10 text-center">
+
+<button
+onclick="toggleLetter()"
+class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-2xl text-xl font-bold shadow-xl">
+
+Open Secret Birthday Letter 💌
+
+</button>
+
+</div>
+
+<div id="letter"
+class="hidden mt-8 bg-white/80 rounded-3xl shadow-2xl p-8 text-center">
+
+<h2 class="text-6xl mb-5">
+Dear Chiku ❤️
+</h2>
+
+<p class="text-lg leading-8">
+
+Happy Birthday to the most adorable, beautiful and special person in my life ✨
+
+<br><br>
+
+Thank you for every smile, every laugh and every beautiful memory.
+
+<br><br>
+
+You make ordinary days feel extraordinary and every moment brighter.
+
+<br><br>
+
+I hope this year brings you happiness, success, good health and endless reasons to smile.
+
+<br><br>
+
+You deserve all the love and happiness in the world ❤️
+
+<br><br>
+
+Happy Birthday Chiku 🎂💖
+
+</p>
+
+</div>
+<!-- Surprise Gift -->
+
+<div class="mt-12 bg-white/80 rounded-3xl shadow-2xl p-8 text-center">
+
+<h2 class="text-6xl mb-4">
+A Special Surprise 🎁
+</h2>
+
+<p class="text-lg mb-5 font-medium">
+Click the gift below ❤️
+</p>
+
+<button
+onclick="toggleGift()"
+class="text-7xl hover:scale-125 transition-all duration-300">
+
+🎁
+
+</button>
+
+<div
+id="giftMessage"
+class="hidden mt-6 bg-pink-100 rounded-3xl p-6 text-lg leading-8 shadow-inner">
+
+No gift could ever be enough for someone as special as you ❤️
+
+<br><br>
+
+But I hope this little website reminds you how much you mean to me.
+
+<br><br>
+
+May this year bring you happiness, success, laughter and beautiful memories.
+
+<br><br>
+
+Happy Birthday Chiku 🎂💖
+
+</div>
+
+</div>
+
+<!-- Final Section -->
+
+<div class="mt-16 bg-white/80 rounded-3xl shadow-2xl p-8 text-center">
+
+<img
+src="IMG-20260126-WA0016.jpg"
+class="w-72 h-72 object-cover rounded-full mx-auto border-8 border-pink-300 shadow-2xl">
+
+<h2 class="text-7xl mt-6 text-pink-700">
+I Love You ❤️
+</h2>
+
+<p class="mt-4 text-xl">
+Happy Birthday Chiku 🎂✨
+</p>
+
+<p class="mt-4 text-lg">
+Made with ❤️ especially for you
+</p>
+
+</div>
+
+<div class="mt-12 text-center pb-10">
+
+<p class="text-lg font-semibold">
+Forever Team Chiku 💖
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const messages = [
+
+"You are officially the cutest human on this planet 😌",
+
+"Every birthday is special, but yours is my favorite ❤️",
+
+"Happy Birthday to the prettiest girl I know 🌹",
+
+"You somehow get more beautiful every year ✨",
+
+"Today the world celebrates its cutest person 🎂",
+
+"If smiles were stars, you'd have your own galaxy 💖",
+
+"You make ordinary moments unforgettable 🥺",
+
+"Thank you for being you ❤️"
+
+];
+
+let count = 0;
+
+function randomMessage(){
+
+const random =
+messages[Math.floor(Math.random()*messages.length)];
+
+document.getElementById('messageBox').innerHTML = random;
+
+count++;
+
+document.getElementById('counter').innerHTML =
+`Button pressed ${count} times 👀`;
+
+}
+
+function toggleLetter(){
+
+document.getElementById('letter')
+.classList.toggle('hidden');
+
+}
+
+function toggleGift(){
+
+document.getElementById('giftMessage')
+.classList.toggle('hidden');
+
+}
+
+const emojis = ["💖","💕","🌹","✨","💌"];
+
+for(let i=0;i<40;i++){
+
+const heart = document.createElement('div');
+
+heart.className = 'floating-heart';
+
+heart.innerHTML =
+emojis[Math.floor(Math.random()*emojis.length)];
+
+heart.style.left =
+Math.random()*100 + 'vw';
+
+heart.style.animationDuration =
+(5 + Math.random()*6) + 's';
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
