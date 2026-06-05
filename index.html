@@ -51,13 +51,95 @@ transition:.4s;
 .gallery img:hover{
 transform:scale(1.05);
 }
+#introScreen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(135deg,#ffd6e8,#ffe8f5,#f5ddff);
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+z-index:999999;
+padding:20px;
+}
 
+.introBox{
+max-width:900px;
+}
+
+.introTitle{
+font-family:'Great Vibes',cursive;
+font-size:4rem;
+color:#d81b60;
+line-height:1.3;
+}
+
+.introText{
+font-size:1.5rem;
+margin-top:25px;
+font-weight:600;
+}
+
+.introTap{
+margin-top:20px;
+font-size:1.2rem;
+color:#c2185b;
+}
+
+#heartButton{
+font-size:120px;
+margin-top:30px;
+cursor:pointer;
+animation:heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat{
+0%{transform:scale(1);}
+25%{transform:scale(1.15);}
+50%{transform:scale(1.4);}
+75%{transform:scale(1.15);}
+100%{transform:scale(1);}
+}
+  #introScreen{
+transition:0.8s;
+  }
 </style>
 
 </head>
 
 <body class="min-h-screen text-gray-800 p-4">
+<audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
 
+<div id="introScreen">
+
+    <div class="introBox">
+
+        <h1 class="introTitle">
+            Happy Birthday To The Cutest And Most Beautiful Girl In The World!!!! ❤️
+        </h1>
+
+        <p class="introText">
+            This is my little surprise to you 💖
+        </p>
+
+        <p class="introTap">
+            Tap my heart ❤️
+        </p>
+
+        <div id="heartButton" onclick="startSurprise()">
+            ❤️
+        </div>
+
+    </div>
+
+</div>
+
+<div id="mainWebsite" style="display:none;">
 <div class="max-w-6xl mx-auto">
 
 <div class="text-center mt-6">
@@ -301,6 +383,21 @@ Forever Team Chiku 💖
 </div>
 
 <script>
+  function startSurprise(){
+
+document.getElementById("bgMusic").play();
+
+document.getElementById("introScreen").style.opacity = "0";
+
+setTimeout(function(){
+
+document.getElementById("introScreen").style.display = "none";
+
+document.getElementById("mainWebsite").style.display = "block";
+
+},800);
+
+  }
 
 const messages = [
 
